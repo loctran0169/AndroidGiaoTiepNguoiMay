@@ -1,0 +1,415 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:background="#ff0c0c0c">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content">
+
+        <View
+            android:id="@+id/appBar"
+            android:layout_width="match_parent"
+            android:layout_height="?actionBarSize"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageButton
+            android:id="@+id/btnBack"
+            android:layout_width="36.0dip"
+            android:layout_height="36.0dip"
+            android:layout_marginStart="28.0dip"
+            android:background="@drawable/ic_back"
+            app:layout_constraintBottom_toBottomOf="@id/appBar"
+            app:layout_constraintStart_toStartOf="@id/appBar"
+            app:layout_constraintTop_toTopOf="@id/appBar" />
+
+        <ImageView
+            android:id="@+id/imgXemChung"
+            android:layout_width="match_parent"
+            android:layout_height="200.0dip"
+            android:background="@drawable/backgroundspiderman"
+            app:layout_constraintTop_toBottomOf="@id/appBar" />
+
+        <View
+            android:layout_width="0.0dip"
+            android:layout_height="0.0dip"
+            android:background="#4d373737"
+            app:layout_constraintBottom_toBottomOf="@id/imgXemChung"
+            app:layout_constraintEnd_toEndOf="@id/imgXemChung"
+            app:layout_constraintStart_toStartOf="@id/imgXemChung"
+            app:layout_constraintTop_toTopOf="@id/imgXemChung" />
+
+        <LinearLayout
+            android:layout_width="320.0dip"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="vertical"
+            app:layout_constraintBottom_toBottomOf="@id/imgXemChung"
+            app:layout_constraintEnd_toEndOf="@id/imgXemChung"
+            app:layout_constraintStart_toStartOf="@id/imgXemChung"
+            app:layout_constraintTop_toTopOf="@id/imgXemChung">
+
+            <TextView
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:fontFamily="@font/montserratmedium"
+                android:gravity="center"
+                android:text="Chào mừng bạn đến với buổi xem chung Đồng hồ đang đếm ngược"
+                android:textColor="#ffffffff"
+                android:textSize="12.0sp" />
+
+            <TextView
+                android:layout_width="100.0dip"
+                android:layout_height="28.0dip"
+                android:layout_marginTop="10.0dip"
+                android:background="@drawable/btnfinish"
+                android:gravity="center"
+                android:text="02 : 59"
+                android:textColor="#ffffffff" />
+        </LinearLayout>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/layoutInfo"
+            android:layout_width="match_parent"
+            android:layout_height="250.0dip"
+            android:layout_marginStart="10.0dip"
+            android:layout_marginTop="10.0dip"
+            android:layout_marginEnd="10.0dip"
+            android:elevation="1.0dip"
+            app:cardCornerRadius="10.0dip"
+            app:layout_constraintTop_toBottomOf="@id/imgXemChung">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent">
+
+                <ImageView
+                    android:id="@+id/imgInfo"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/backgroundspiderman" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="#b31b1717" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/imgAvatar"
+            android:layout_width="80.0dip"
+            android:layout_height="120.0dip"
+            android:layout_marginStart="15.0dip"
+            android:layout_marginTop="10.0dip"
+            android:elevation="2.0dip"
+            app:layout_constraintStart_toStartOf="@id/layoutInfo"
+            app:layout_constraintTop_toTopOf="@id/layoutInfo">
+
+            <ImageView
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:background="@drawable/spiderman" />
+        </androidx.cardview.widget.CardView>
+
+        <TextView
+            android:id="@+id/tvName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10.0dip"
+            android:layout_marginTop="5.0dip"
+            android:elevation="2.0dip"
+            android:fontFamily="@font/montserratlight"
+            android:gravity="center|left|top"
+            android:text="Người Nhện: Trở Về Nhà"
+            android:textColor="@android:color/white"
+            android:textSize="18.0sp"
+            app:layout_constraintStart_toEndOf="@id/imgAvatar"
+            app:layout_constraintTop_toTopOf="@id/layoutInfo" />
+
+        <TextView
+            android:id="@+id/tvTacGia"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10.0dip"
+            android:layout_marginTop="5.0dip"
+            android:elevation="2.0dip"
+            android:fontFamily="@font/montserratregular"
+            android:gravity="center|left|top"
+            android:text="2017, Đạo diễn: Jon Watts"
+            android:textColor="#ff80aeff"
+            android:textSize="13.0sp"
+            app:layout_constraintStart_toEndOf="@id/imgAvatar"
+            app:layout_constraintTop_toBottomOf="@id/tvName" />
+
+        <TextView
+            android:id="@+id/tvSoPhut"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10.0dip"
+            android:layout_marginTop="5.0dip"
+            android:background="@drawable/tvsophut"
+            android:elevation="2.0dip"
+            android:padding="3.0dip"
+            android:text="117 min"
+            android:textColor="@android:color/white"
+            android:textSize="10.0dip"
+            app:layout_constraintStart_toEndOf="@id/imgAvatar"
+            app:layout_constraintTop_toBottomOf="@id/tvTacGia" />
+
+        <TextView
+            android:id="@+id/tvTheLoai"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10.0dip"
+            android:elevation="2.0dip"
+            android:fontFamily="@font/montserratregular"
+            android:gravity="center|left|top"
+            android:text="Hành động, Phiêu lưu..."
+            android:textColor="#ff80aeff"
+            android:textSize="10.0sp"
+            app:layout_constraintBaseline_toBaselineOf="@id/tvSoPhut"
+            app:layout_constraintBottom_toBottomOf="@id/tvSoPhut"
+            app:layout_constraintStart_toEndOf="@id/tvSoPhut"
+            app:layout_constraintTop_toTopOf="@id/tvSoPhut" />
+
+        <TextView
+            android:layout_width="0.0dip"
+            android:layout_height="0.0dip"
+            android:layout_marginStart="15.0dip"
+            android:layout_marginTop="15.0dip"
+            android:layout_marginEnd="15.0dip"
+            android:elevation="2.0dip"
+            android:fontFamily="@font/montserratlight"
+            android:maxLines="5"
+            android:text="Tạm biệt hai franchise về thời sinh viên, Spider-Man: Homecoming sẽ lần đầu tiên đưa các khán giả đến với cuộc sống trung học của Peter Paker – siêu anh hùng Người Nhện. Liệu một cậu bé chưa trưởng thành sẽ làm thế nào để cân bằng cuộc sống bình thường và trách nhiệm của một anh hùng giải cứu thế giới."
+            android:textColor="@android:color/white"
+            app:layout_constraintBottom_toBottomOf="@id/layoutInfo"
+            app:layout_constraintEnd_toEndOf="@id/layoutInfo"
+            app:layout_constraintStart_toStartOf="@id/layoutInfo"
+            app:layout_constraintTop_toBottomOf="@id/imgAvatar" />
+
+        <TextView
+            android:id="@+id/tvNunberMember"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="22.0dip"
+            android:layout_marginTop="15.0dip"
+            android:drawableStart="@drawable/ic_user_white"
+            android:drawablePadding="10.0dip"
+            android:gravity="center"
+            android:text="(3) người trong phòng"
+            android:textColor="#ff80aeff"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/layoutInfo" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rcvUser"
+            android:layout_width="match_parent"
+            android:layout_height="110.0dip"
+            android:layout_marginTop="15.0dip"
+            android:clipToPadding="false"
+            android:orientation="horizontal"
+            android:paddingStart="16.0dip"
+            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+            app:layout_constraintTop_toBottomOf="@id/tvNunberMember" />
+
+        <TextView
+            android:id="@+id/lbDangCho"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="32.0dip"
+            android:layout_marginTop="25.0dip"
+            android:fontFamily="@font/montserratmedium"
+            android:text="Danh sách phim chờ  "
+            android:textColor="#ffffffff"
+            android:textSize="14.0sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/rcvUser" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rcvDangCho"
+            android:layout_width="match_parent"
+            android:layout_height="150.0dip"
+            android:layout_marginStart="15.0dip"
+            android:layout_marginTop="15.0dip"
+            android:orientation="horizontal"
+            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+            app:layout_constraintTop_toBottomOf="@id/lbDangCho" />
+
+        <TextView
+            android:id="@+id/lbBinhLuan"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="32.0dip"
+            android:layout_marginTop="20.0dip"
+            android:fontFamily="@font/montserratmedium"
+            android:text="Bình Luận   (4)"
+            android:textColor="#ffffffff"
+            android:textSize="14.0sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/rcvDangCho" />
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/img1"
+            android:layout_width="60.0dip"
+            android:layout_height="60.0dip"
+            android:layout_marginStart="30.0dip"
+            android:layout_marginTop="20.0dip"
+            app:cardCornerRadius="30.0dip"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/lbBinhLuan">
+
+            <ImageView
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:background="@drawable/imguserdemo" />
+        </androidx.cardview.widget.CardView>
+
+        <EditText
+            android:layout_width="220.0dip"
+            android:layout_height="36.0dip"
+            android:layout_marginStart="27.0dip"
+            android:background="@drawable/tvtaoma"
+            android:fontFamily="@font/montserratregular"
+            android:hint="Viết bình luận..."
+            android:paddingStart="17.0dip"
+            android:textSize="14.0sp"
+            app:layout_constraintBottom_toBottomOf="@id/img1"
+            app:layout_constraintStart_toEndOf="@id/img1"
+            app:layout_constraintTop_toTopOf="@id/img1" />
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/img2"
+            android:layout_width="60.0dip"
+            android:layout_height="60.0dip"
+            android:layout_marginStart="30.0dip"
+            android:layout_marginTop="20.0dip"
+            app:cardCornerRadius="30.0dip"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/img1">
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@drawable/imguserdemo" />
+        </androidx.cardview.widget.CardView>
+
+        <TextView
+            android:id="@+id/tvNameComment1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="27.0dip"
+            android:layout_marginTop="4dp"
+            android:fontFamily="@font/montserratregular"
+            android:text="Lucy"
+            android:textColor="@android:color/white"
+            android:textSize="14sp"
+            app:layout_constraintStart_toEndOf="@id/img2"
+            app:layout_constraintTop_toTopOf="@id/img2" />
+
+        <TextView
+            android:id="@+id/tvComment1"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="3dp"
+            android:layout_marginEnd="15dp"
+            android:fontFamily="@font/montserratregular"
+            android:text="hay lắm, cảm động lúc Bob chạy đi. tuyệt "
+            android:textColor="#d3d3d3"
+            android:textSize="12sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="@id/tvNameComment1"
+            app:layout_constraintTop_toBottomOf="@id/tvNameComment1" />
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/img3"
+            android:layout_width="60.0dip"
+            android:layout_height="60.0dip"
+            android:layout_marginStart="30.0dip"
+            android:layout_marginTop="20.0dip"
+            app:cardCornerRadius="30.0dip"
+
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/img2">
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@drawable/imguserdemo" />
+        </androidx.cardview.widget.CardView>
+
+        <TextView
+            android:id="@+id/tvNameComment2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="27.0dip"
+            android:layout_marginTop="4dp"
+            android:fontFamily="@font/montserratregular"
+            android:text="Lucy"
+            android:textColor="@android:color/white"
+            android:textSize="14sp"
+            app:layout_constraintStart_toEndOf="@id/img3"
+            app:layout_constraintTop_toTopOf="@id/img3" />
+
+        <TextView
+            android:id="@+id/tvComment2"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="3dp"
+            android:layout_marginEnd="15dp"
+            android:fontFamily="@font/montserratregular"
+            android:text="hay lắm, cảm động lúc Bob chạy đi. tuyệt "
+            android:textColor="#d3d3d3"
+            android:textSize="12sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="@id/tvNameComment2"
+            app:layout_constraintTop_toBottomOf="@id/tvNameComment2" />
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/img4"
+            android:layout_width="60.0dip"
+            android:layout_height="60.0dip"
+            android:layout_marginStart="30.0dip"
+            android:layout_marginTop="20.0dip"
+            android:paddingBottom="10.0dip"
+            app:cardCornerRadius="30.0dip"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/img3">
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@drawable/imguserdemo" />
+        </androidx.cardview.widget.CardView>
+
+        <TextView
+            android:id="@+id/tvNameComment3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="27.0dip"
+            android:layout_marginTop="4dp"
+            android:fontFamily="@font/montserratregular"
+            android:text="Lucy"
+            android:textColor="@android:color/white"
+            android:textSize="14sp"
+            app:layout_constraintStart_toEndOf="@id/img4"
+            app:layout_constraintTop_toTopOf="@id/img4" />
+
+        <TextView
+            android:id="@+id/tvComment3"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="3dp"
+            android:layout_marginEnd="15dp"
+            android:fontFamily="@font/montserratregular"
+            android:text="hay lắm, cảm động lúc Bob chạy đi. tuyệt "
+            android:textColor="#d3d3d3"
+            android:textSize="12sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="@id/tvNameComment3"
+            app:layout_constraintTop_toBottomOf="@id/tvNameComment3" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.core.widget.NestedScrollView>

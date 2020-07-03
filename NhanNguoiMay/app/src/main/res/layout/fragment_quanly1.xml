@@ -1,0 +1,311 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#ff0c0c0c">
+
+    <View
+        android:id="@id/appBar"
+        android:layout_width="match_parent"
+        android:layout_height="?actionBarSize"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageButton
+        android:id="@+id/btnBack"
+        android:layout_width="36.0dip"
+        android:layout_height="36.0dip"
+        android:layout_marginStart="28.0dip"
+        android:background="@drawable/ic_back"
+        app:layout_constraintBottom_toBottomOf="@id/appBar"
+        app:layout_constraintStart_toStartOf="@id/appBar"
+        app:layout_constraintTop_toTopOf="@id/appBar" />
+
+    <ImageView
+        android:id="@id/imgXemChung"
+        android:layout_width="match_parent"
+        android:layout_height="200.0dip"
+        android:background="@drawable/topxemchung3"
+        app:layout_constraintTop_toBottomOf="@id/appBar" />
+
+    <View
+        android:layout_width="0.0dip"
+        android:layout_height="0.0dip"
+        android:background="#72222222"
+        app:layout_constraintBottom_toBottomOf="@id/imgXemChung"
+        app:layout_constraintEnd_toEndOf="@id/imgXemChung"
+        app:layout_constraintStart_toStartOf="@id/imgXemChung"
+        app:layout_constraintTop_toTopOf="@id/imgXemChung" />
+
+    <LinearLayout
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="@id/imgXemChung"
+        app:layout_constraintEnd_toEndOf="@id/imgXemChung"
+        app:layout_constraintStart_toStartOf="@id/imgXemChung"
+        app:layout_constraintTop_toTopOf="@id/imgXemChung">
+
+        <TextView
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:fontFamily="@font/montserratsemibold"
+            android:gravity="center"
+            android:text="Quản lý hồ sơ"
+            android:textColor="#ffff6500"
+            android:textSize="18.0sp" />
+
+        <TextView
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_marginTop="10.0dip"
+            android:fontFamily="@font/montserratregular"
+            android:gravity="center"
+            android:text="Bạn có thể quản lý các thành viên trong gia đình một cách tôi ưu nhất"
+            android:textColor="#ffffffff"
+            android:textSize="12.0sp"
+            android:textStyle="bold" />
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/lbTaoProfile"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32.0dip"
+        android:layout_marginTop="35.0dip"
+        android:fontFamily="@font/montserratsemibold"
+        android:text="Tạo Profile để quản lý"
+        android:textColor="#FF0004"
+        android:textSize="15.0sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/imgXemChung" />
+
+    <HorizontalScrollView
+        android:layout_width="wrap_content"
+        android:layout_height="110dp"
+        android:layout_marginTop="25dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/lbTaoProfile">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:clipToPadding="false"
+            android:orientation="horizontal"
+            android:paddingStart="20dp">
+
+            <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:app="http://schemas.android.com/apk/res-auto"
+                android:layout_width="76.0dip"
+                android:layout_height="110.0dip"
+                android:background="#ff0c0c0c">
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/imgUser"
+                    android:layout_width="60.0dip"
+                    android:layout_height="60.0dip"
+                    android:layout_marginStart="8.0dip"
+                    android:layout_marginTop="10.0dip"
+                    android:layout_marginEnd="8.0dip"
+                    app:cardCornerRadius="30.0dip"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent">
+
+                    <ImageView
+                        android:id="@+id/imgAvatarUser"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@drawable/imguserdemo" />
+                </androidx.cardview.widget.CardView>
+
+                <TextView
+                    android:id="@+id/tvNameUser"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10.0dip"
+                    android:layout_marginBottom="10.0dip"
+                    android:fontFamily="@font/montserratregular"
+                    android:maxLines="1"
+                    android:text="Herry Lê"
+                    android:textColor="#ff959595"
+                    android:textSize="12.0sp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/imgUser" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:app="http://schemas.android.com/apk/res-auto"
+                android:layout_width="76.0dip"
+                android:layout_height="110.0dip"
+                android:layout_marginStart="15dp"
+                android:background="#ff0c0c0c">
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/imgUse1"
+                    android:layout_width="60.0dip"
+                    android:layout_height="60.0dip"
+                    android:layout_marginStart="8.0dip"
+                    android:layout_marginTop="10.0dip"
+                    android:layout_marginEnd="8.0dip"
+                    app:cardCornerRadius="30dp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent">
+
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@drawable/imguserdemo" />
+                </androidx.cardview.widget.CardView>
+
+                <TextView
+                    android:id="@+id/tvNameUser1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10.0dip"
+                    android:layout_marginBottom="10.0dip"
+                    android:fontFamily="@font/montserratregular"
+                    android:maxLines="1"
+                    android:text="Herry Lê"
+                    android:textColor="#ff959595"
+                    android:textSize="12.0sp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/imgUse1" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:app="http://schemas.android.com/apk/res-auto"
+                android:layout_width="76.0dip"
+                android:layout_height="110.0dip"
+                android:layout_marginStart="15dp"
+                android:background="#ff0c0c0c">
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/imgUser2"
+                    android:layout_width="60.0dip"
+                    android:layout_height="60.0dip"
+                    android:layout_marginStart="8.0dip"
+                    android:layout_marginTop="10.0dip"
+                    android:layout_marginEnd="8.0dip"
+                    app:cardCornerRadius="30.0dip"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent">
+
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@drawable/imguserdemo" />
+                </androidx.cardview.widget.CardView>
+
+                <TextView
+                    android:id="@+id/tvNameUser2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10.0dip"
+                    android:layout_marginBottom="10.0dip"
+                    android:fontFamily="@font/montserratregular"
+                    android:maxLines="1"
+                    android:text="Herry Lê"
+                    android:textColor="#ff959595"
+                    android:textSize="12.0sp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/imgUser2" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:app="http://schemas.android.com/apk/res-auto"
+                android:layout_width="76.0dip"
+                android:layout_height="110.0dip"
+                android:layout_marginStart="15dp"
+                android:background="#ff0c0c0c">
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/imgUser3"
+                    android:layout_width="60.0dip"
+                    android:layout_height="60.0dip"
+                    android:layout_marginStart="8.0dip"
+                    android:layout_marginTop="10.0dip"
+                    android:layout_marginEnd="8.0dip"
+                    app:cardCornerRadius="30.0dip"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent">
+
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@drawable/imguserdemo" />
+                </androidx.cardview.widget.CardView>
+
+                <TextView
+                    android:id="@+id/tvNameUser3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10.0dip"
+                    android:layout_marginBottom="10.0dip"
+                    android:fontFamily="@font/montserratregular"
+                    android:maxLines="1"
+                    android:text="Herry Lê"
+                    android:textColor="#ff959595"
+                    android:textSize="12.0sp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/imgUser3" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:app="http://schemas.android.com/apk/res-auto"
+                android:layout_width="76.0dip"
+                android:layout_height="110.0dip"
+                android:layout_marginStart="15dp"
+                android:background="#ff0c0c0c">
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/imgUser4"
+                    android:layout_width="60.0dip"
+                    android:layout_height="60.0dip"
+                    android:layout_marginStart="8.0dip"
+                    android:layout_marginTop="10.0dip"
+                    android:layout_marginEnd="8.0dip"
+                    app:cardCornerRadius="30dp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent">
+
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@drawable/ic_plus"
+                        android:src="@android:color/transparent" />
+                </androidx.cardview.widget.CardView>
+
+                <TextView
+                    android:id="@+id/tvNameUser4"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10.0dip"
+                    android:layout_marginBottom="10.0dip"
+                    android:fontFamily="@font/montserratregular"
+                    android:gravity="center"
+                    android:maxLines="1"
+                    android:text="Thêm Profile"
+                    android:textColor="#D8861E"
+                    android:textSize="12.0sp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/imgUser4" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </LinearLayout>
+    </HorizontalScrollView>
+</androidx.constraintlayout.widget.ConstraintLayout>

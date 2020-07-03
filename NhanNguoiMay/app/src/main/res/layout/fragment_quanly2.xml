@@ -1,0 +1,201 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="#ff0c0c0c"
+    android:elevation="-1dp">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#ff0c0c0c"
+        android:elevation="0dp"
+        android:focusable="true"
+        android:focusableInTouchMode="true">
+
+        <View
+            android:id="@id/appBar"
+            android:layout_width="match_parent"
+            android:layout_height="?actionBarSize"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageButton
+            android:id="@+id/btnBack"
+            android:layout_width="36.0dip"
+            android:layout_height="36.0dip"
+            android:layout_marginStart="28.0dip"
+            android:background="@drawable/ic_back"
+            android:elevation="2dp"
+            app:layout_constraintBottom_toBottomOf="@id/appBar"
+            app:layout_constraintStart_toStartOf="@id/appBar"
+            app:layout_constraintTop_toTopOf="@id/appBar" />
+
+        <com.joooonho.SelectableRoundedImageView
+            android:id="@+id/imgBackGround"
+            android:layout_width="match_parent"
+            android:layout_height="250dp"
+            android:elevation="1dp"
+            android:scaleType="centerCrop"
+            android:src="@drawable/pinkly"
+            app:layout_constraintTop_toTopOf="parent"
+            app:sriv_left_bottom_corner_radius="20dp"
+            app:sriv_right_bottom_corner_radius="20dp" />
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/layoutInfo"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="25dp"
+            android:layout_marginEnd="25dp"
+            android:background="@drawable/backgroundhoso"
+            android:elevation="2dp"
+            app:layout_constraintBottom_toBottomOf="@id/imgBackGround"
+            app:layout_constraintTop_toBottomOf="@id/imgBackGround">
+
+            <TextView
+                android:id="@+id/lbHoSo"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="25dp"
+                android:fontFamily="@font/montserratsemibold"
+                android:gravity="center"
+                android:text="Nguyễn Minh Anh"
+                android:textColor="#ffff6500"
+                android:textSize="18.0sp"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <EditText
+                android:id="@+id/editName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="25dp"
+                android:layout_marginEnd="25dp"
+                android:fontFamily="@font/montserratregular"
+                android:gravity="center"
+                android:inputType="textEmailAddress"
+                android:maxLines="1"
+                android:text="Em út"
+                android:textColor="@android:color/white"
+                android:textSize="13sp"
+                app:layout_constraintTop_toBottomOf="@id/lbHoSo" />
+
+            <androidx.appcompat.widget.SwitchCompat
+                android:id="@+id/sWitch"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="28dp"
+                android:layout_marginTop="15dp"
+                android:layout_marginBottom="28dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/editName" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:layout_marginEnd="28dp"
+                android:layout_marginBottom="28dp"
+                android:fontFamily="@font/montserratregular"
+                android:text="Đủ 18 tuổi"
+                android:textColor="@android:color/white"
+                app:layout_constraintBaseline_toBaselineOf="@+id/sWitch"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <TextView
+            android:id="@+id/lbChonPhim"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="32.0dip"
+            android:layout_marginTop="25.0dip"
+            android:fontFamily="@font/montserratsemibold"
+            android:text="Phim đề xuất"
+            android:textColor="#ffffffff"
+            android:textSize="16.0sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/layoutInfo" />
+
+        <androidx.appcompat.widget.SwitchCompat
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="16dp"
+            android:text="Tự động"
+            android:textColor="@android:color/white"
+            android:textSize="12sp"
+            app:layout_constraintBottom_toBottomOf="@id/lbChonPhim"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@id/lbChonPhim"
+            app:switchPadding="10dp" />
+
+        <LinearLayout
+            android:id="@+id/layout_spinner"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20.0dip"
+            android:layout_marginTop="15.0dip"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/lbChonPhim">
+
+            <Spinner
+                android:id="@+id/spinner1"
+                android:layout_width="100.0dip"
+                android:layout_height="28.0dip"
+                android:background="@drawable/bg_spinner"
+                android:dropDownSelector="@drawable/selector_spinner"
+                android:overlapAnchor="false"
+                android:popupBackground="@drawable/bg_popup_spinner"
+                android:spinnerMode="dropdown" />
+
+            <Spinner
+                android:id="@+id/spinner2"
+                android:layout_width="100.0dip"
+                android:layout_height="28.0dip"
+                android:layout_marginStart="5.0dip"
+                android:background="@drawable/bg_spinner"
+                android:dropDownSelector="@drawable/selector_spinner"
+                android:overlapAnchor="false"
+                android:popupBackground="@drawable/bg_popup_spinner"
+                android:spinnerMode="dropdown" />
+
+            <Spinner
+                android:id="@+id/spinner3"
+                android:layout_width="100.0dip"
+                android:layout_height="28.0dip"
+                android:layout_marginStart="5.0dip"
+                android:background="@drawable/bg_spinner"
+                android:dropDownSelector="@drawable/selector_spinner"
+                android:overlapAnchor="false"
+                android:popupBackground="@drawable/bg_popup_spinner"
+                android:spinnerMode="dropdown" />
+        </LinearLayout>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rcvPhim"
+            android:layout_width="match_parent"
+            android:layout_height="150.0dip"
+            android:layout_marginTop="15.0dip"
+            android:clipToPadding="false"
+            android:orientation="horizontal"
+            android:paddingStart="10.0dip"
+            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+            app:layout_constraintTop_toBottomOf="@id/layout_spinner" />
+
+        <Button
+            android:layout_width="250.0dip"
+            android:layout_height="42.0dip"
+            android:layout_marginTop="20.0dip"
+            android:layout_marginBottom="20.0dip"
+            android:background="@drawable/btnfinish"
+            android:fontFamily="@font/montserratmedium"
+            android:text="Hoàn thành"
+            android:textAllCaps="false"
+            android:textColor="#ffffffff"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/rcvPhim" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.core.widget.NestedScrollView>

@@ -1,0 +1,187 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="#ff0c0c0c">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="70dp"
+            android:scaleType="centerCrop"
+            android:src="@drawable/weekendroundup"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageView
+            android:id="@+id/imgVideo"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="50dp"
+            android:layout_marginEnd="10dp"
+            android:scaleType="center"
+            android:src="@drawable/twoteam"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageView
+            android:id="@+id/cloud"
+            android:layout_width="240dp"
+            android:layout_height="240dp"
+            android:layout_marginEnd="15dp"
+            android:src="@drawable/cloud"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="@id/imgVideo"
+            app:layout_constraintTop_toBottomOf="@id/imgVideo" />
+
+        <TextView
+            android:layout_width="100dp"
+            android:layout_height="48dp"
+            android:background="@drawable/backhearth"
+            android:drawableStart="@drawable/ic_heart"
+            android:drawablePadding="7dp"
+            android:fontFamily="@font/montserratmedium"
+            android:gravity="left|center"
+            android:paddingStart="12dp"
+            android:text="215"
+            android:textColor="#FF2C2F"
+            android:textSize="20sp"
+            app:layout_constraintBottom_toTopOf="@id/layoutChat"
+            app:layout_constraintStart_toStartOf="@id/layoutChat" />
+
+        <TextView
+            android:layout_width="100dp"
+            android:layout_height="48dp"
+            android:background="@drawable/backhearth"
+            android:drawableStart="@drawable/ic_soccer"
+            android:drawablePadding="7dp"
+            android:fontFamily="@font/montserratmedium"
+            android:gravity="left|center"
+            android:paddingStart="12dp"
+            android:text="01"
+            android:textColor="#FF2C2F"
+            android:textSize="20sp"
+            app:layout_constraintBottom_toTopOf="@id/layoutChat"
+            app:layout_constraintEnd_toEndOf="@id/layoutChat" />
+
+        <LinearLayout
+            android:id="@+id/layoutChat"
+            android:layout_width="match_parent"
+            android:layout_height="400dp"
+            android:layout_marginStart="10dp"
+            android:layout_marginEnd="10dp"
+            android:background="@drawable/chatxemchung3"
+            android:orientation="vertical"
+            app:layout_constraintTop_toBottomOf="@id/cloud">
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rcvChat"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_marginTop="30dp"
+                android:layout_weight="1"
+                app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="15dp"
+                android:elevation="1dp"
+                android:orientation="horizontal">
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center"
+                    android:layout_marginStart="2dp"
+                    android:layout_marginTop="1dp"
+                    android:layout_marginEnd="7dp"
+                    android:layout_marginBottom="1dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/editchat"
+                    android:elevation="3dp"
+                    android:orientation="horizontal">
+
+                    <EditText
+                        android:id="@+id/editName"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginStart="25dp"
+                        android:layout_marginEnd="25dp"
+                        android:layout_weight="1"
+                        android:background="@android:color/transparent"
+                        android:drawableStart="@drawable/ic_micro"
+                        android:fontFamily="@font/montserratregular"
+                        android:gravity="center|left"
+                        android:hint="Nói gì đó..."
+                        android:inputType="textEmailAddress"
+                        android:maxLines="1"
+                        android:paddingStart="5dp"
+                        android:textColor="@android:color/black"
+                        android:textSize="13sp" />
+
+                    <ImageView
+                        android:layout_width="28dp"
+                        android:layout_height="28dp"
+                        android:layout_gravity="center"
+                        android:layout_marginEnd="5dp"
+                        android:background="@drawable/ic_smile" />
+
+                    <ImageView
+                        android:layout_width="28dp"
+                        android:layout_height="28dp"
+                        android:layout_gravity="center"
+                        android:layout_marginEnd="10dp"
+                        android:background="@drawable/ic_photo" />
+                </LinearLayout>
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="48dp"
+                    android:layout_height="48dp"
+                    android:layout_gravity="center"
+                    android:layout_marginEnd="10dp"
+                    android:elevation="2dp"
+                    app:cardCornerRadius="24dp">
+
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:scaleType="centerInside"
+                        android:src="@drawable/ic_send" />
+                </androidx.cardview.widget.CardView>
+            </LinearLayout>
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/tvNhaKhach"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="90dp"
+            android:fontFamily="@font/montserratsemibold"
+            android:text="HOME"
+            android:textColor="@android:color/white"
+            android:textSize="28sp"
+            app:layout_constraintEnd_toEndOf="@id/cloud"
+            app:layout_constraintStart_toStartOf="@id/cloud"
+            app:layout_constraintTop_toTopOf="@id/cloud" />
+
+        <ImageView
+            android:layout_marginTop="6dp"
+            android:id="@+id/imgTeam"
+            android:layout_width="120dp"
+            android:layout_height="120dp"
+            android:layout_marginBottom="100dp"
+            android:src="@drawable/liver"
+            android:scaleType="centerCrop"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tvNhaKhach" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.core.widget.NestedScrollView>

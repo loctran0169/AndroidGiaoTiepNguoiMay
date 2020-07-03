@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TextView xmlns:android="http://schemas.android.com/apk/res/android"
+    style="@style/TextAppearance.AppCompat.Widget.TextView.SpinnerItem"
+    android:layout_width="match_parent"
+    android:layout_height="32.0dip"
+    android:background="#2E2E2E"
+    android:gravity="center|left"
+    android:paddingLeft="15.0dip"
+    android:text="Kiến trúc máy tính"
+    android:textColor="@android:color/white"
+    android:textSize="10.0sp" />
